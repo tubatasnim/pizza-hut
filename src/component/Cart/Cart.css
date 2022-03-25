@@ -1,0 +1,15 @@
+.cart-container img{
+    width:35px;
+    height:35px;
+    border:1px solid gray;
+    border-radius: 30px;
+}
+.cart-container h2{
+    font-size: medium;
+}
+.cart-container{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    gap:10px;
+}

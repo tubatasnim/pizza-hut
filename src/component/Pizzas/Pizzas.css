@@ -29,6 +29,38 @@
     position: sticky;
     top:0;
 }
+.btn-choose{
+    width: 100%;
+    background-color: rgb(248, 195, 96);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+  
+}
+.btn-choose-again{
+    width: 100%;
+    background-color: rgb(248, 195, 96);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+  
+}
+.btn-choose:hover{
+    background-color: orange;
+   
+}
+.btn-choose-again:hover{
+    background-color: rgb(120, 240, 90);
+   
+}
+
 /* responsive for mobile */
 @media only screen and (max-width: 767px) {
   .pizzas-container{
