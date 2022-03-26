@@ -29,7 +29,7 @@ const Pizzas = () => {
     }
     const handleChooseCart = (cart) => {
         const chooseOne = [...choose, cart]
-        const selectOne = chooseOne[Math.floor(Math.random() * chooseOne.length)];
+        const selectOne = chooseOne[Math.floor(Math.random() * chooseOne.length === [3])];
         setChoose(selectOne);
         console.log('clicked');
     }

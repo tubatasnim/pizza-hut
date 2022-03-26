@@ -5,10 +5,12 @@ import './Choose.css';
 const Choose = (props) => {
     const { img, name } = props.choose;
     return (
-        <div className="choose">
-            <img src={img} alt="" />
+        <div className="choose-container">
+            <div className="choose">
+                <img src={img} alt="" />
 
-            <h2>{name}</h2>
+                <h2>{name}</h2>
+            </div>
 
             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
 
