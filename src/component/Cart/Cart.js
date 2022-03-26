@@ -5,7 +5,6 @@ import React from 'react';
 import './Cart.css';
 const Cart = (props) => {
 
-
     const { img, name } = props.cart;
     return (
         <div>

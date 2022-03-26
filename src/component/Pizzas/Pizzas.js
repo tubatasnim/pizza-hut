@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Answer from '../Answer/Answer';
 import Cart from '../Cart/Cart';
@@ -20,18 +19,30 @@ const Pizzas = () => {
 
     const handleAddToCart = (pizza) => {
         const newCart = [...cart, pizza];
-        if (newCart.length <= [4]) {
-            setCart(newCart);
-        }
-        else {
+        if (cart.length === 4) {
+
             alert("You cannot add pizza more than 4. Please choose 4 pizzas");
         }
-    }
-    const handleChooseCart = (cart) => {
-        const chooseOne = [...choose, cart]
-        const selectOne = chooseOne[Math.floor(Math.random() * chooseOne.length === [3])];
-        setChoose(selectOne);
-        console.log('clicked');
+
+        else {
+            setCart(newCart);
+        }
+    };
+    const getChoose = (items) => {
+        if (cart.length === 0) {
+            alert('please add some Pizzas');
+        }
+        else {
+            const randomNum = Math.floor(Math.random() * items.length);
+            const randomPizza = items[randomNum];
+            setChoose([randomPizza]);
+            setCart([]);
+        }
+
+
+
+
+
     }
     const handleChooseAgain = () => {
     }
@@ -52,21 +63,21 @@ const Pizzas = () => {
                 <div className='cart-pizzas-container'>
                     <h2>Selected Pizzas</h2>
                     {
-                        cart.map(cart => <Cart
-                            key={cart.name}
-                            cart={cart}
+                        cart.map((item, index) => <Cart
+                            key={index}
+                            cart={item}
                         ></Cart>)
                     }
                     <div>
-
                         {
-                            choose.map(choose => <Choose
-                                key={choose.img}
-                                choose={choose}
-                                handleChooseCart={handleChooseCart}
+                            choose.map(item => <Choose
+                                key={item.img}
+                                choose={item}
+                                getChoose={getChoose}
                             ></Choose>)
                         }
-                        <button onClick={() => handleChooseCart(cart)} className='btn-choose'>CHOOSE 1 FOR ME</button>
+                        <button onClick={() => getChoose(cart)} className='btn-choose'>CHOOSE 1 FOR ME</button>
+                        {choose.newCart}
                         <button onClick={() => handleChooseAgain(setCart([]))} className='btn-choose-again'>CHOOSE AGAIN</button>
 
                     </div>
