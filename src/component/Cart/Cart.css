@@ -7,9 +7,16 @@
 .cart-container h2{
     font-size: medium;
 }
+.cart-container-full{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .cart-container{
     display: flex;
     align-items: center;
     justify-content:start;
     gap:10px;
+  
+    
 }

@@ -1,12 +1,17 @@
+
 import React, { useEffect, useState } from 'react';
+import Answer from '../Answer/Answer';
 import Cart from '../Cart/Cart';
+import Choose from '../Choose/Choose';
 import Pizza from '../Pizza/Pizza';
 import './Pizzas.css';
 
 
 const Pizzas = () => {
     const [pizzas, setPizzas] = useState([]);
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
+    const [choose, setChoose] = useState([]);
+
 
 
     useEffect(() => {
@@ -21,10 +26,13 @@ const Pizzas = () => {
             setCart(newCart);
         }
         else {
-            alert('please choose 4 pizzas');
+            alert("You cannot add pizza more than 4. Please choose 4 pizzas");
         }
-
-
+    }
+    const handleChooseCart = (cart) => {
+        const chooseOne = [...choose, cart]
+        const selectOne = (Math.floor(Math.random() * chooseOne.length));
+        setChoose(selectOne);
     }
     return (
         <div >
@@ -47,15 +55,29 @@ const Pizzas = () => {
                             key={cart.name}
                             cart={cart}
                         ></Cart>)
+
+
+
+
                     }
-                    <div >
-                        <button className='btn-choose'>CHOOSE 1 FOR ME</button>
+                    <div>
+
+                        {
+                            choose.map(choose => <Choose
+                                // key={choose.toString()}
+                                key={choose.img}
+                                choose={choose}
+                                handleChooseCart={handleChooseCart}
+                            ></Choose>)
+                        }
+                        <button onClick={() => handleChooseCart(choose)} className='btn-choose'>CHOOSE 1 FOR ME</button>
                         <button className='btn-choose-again'>CHOOSE AGAIN</button>
+
                     </div>
                 </div>
 
             </div>
-
+            <Answer></Answer>
         </div>
     );
 };

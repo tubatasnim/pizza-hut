@@ -1,0 +1,48 @@
+/* .btn-choose{
+    width: 100%;
+    background-color: rgb(248, 195, 96);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 5px;
+  
+}
+.btn-choose-again{
+    width: 100%;
+    background-color: rgb(248, 195, 96);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+  
+}
+.btn-choose:hover{
+    background-color: orange;
+   
+}
+.btn-choose-again:hover{
+    background-color: rgb(120, 240, 90);
+   
+} */
+.choose img{
+   
+        width:35px;
+        height:35px;
+        border:1px solid gray;
+        border-radius: 30px;
+  
+}
+.choose h2{
+    font-size: medium;
+}
+.choose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

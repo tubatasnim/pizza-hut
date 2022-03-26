@@ -38,6 +38,7 @@
     border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
+    margin-right: 5px;
   
 }
 .btn-choose-again{
@@ -60,7 +61,6 @@
     background-color: rgb(120, 240, 90);
    
 }
-
 /* responsive for mobile */
 @media only screen and (max-width: 767px) {
   .pizzas-container{
