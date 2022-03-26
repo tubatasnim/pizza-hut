@@ -12,7 +12,6 @@
     width: 300px;
     height: 300px;
     border-radius: 8px;
-    
 }
 .pizza-info{
     margin:0 14px;
@@ -26,7 +25,6 @@
     font-size:22px ;
     font-weight: bold;
    margin-top: 7px;
-   
 }
 .btn-cart{
     display: flex;
@@ -38,7 +36,6 @@
     border-radius: 0px 0px 10px 10px;
     position: absolute;
     bottom: 0;
-   
 }
 .btn-cart .btn-text{
     margin-right: 5px;
@@ -47,5 +44,4 @@
 }
 .btn-cart:hover{
     background-color: orange;
-   
 }

@@ -14,12 +14,11 @@ const Pizza = (props) => {
                     <p>Price: ${price}</p>
                 </div>
                 <button onClick={() => props.handleAddToCart(props.pizza)} className='btn-cart'><p className='btn-text'>Add To Cart</p>
-                    <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon></button>
+                    <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
+                </button>
             </div>
-
         </div>
     );
-
 };
 
 

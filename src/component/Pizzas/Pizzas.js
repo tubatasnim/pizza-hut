@@ -38,14 +38,9 @@ const Pizzas = () => {
             setChoose([randomPizza]);
             setCart([]);
         }
-
-
-
-
-
-    }
+    };
     const handleChooseAgain = () => {
-    }
+    };
     return (
         <div >
             <h1 className='heading'>Pizza Hut</h1>
@@ -79,10 +74,8 @@ const Pizzas = () => {
                         <button onClick={() => getChoose(cart)} className='btn-choose'>CHOOSE 1 FOR ME</button>
                         {choose.newCart}
                         <button onClick={() => handleChooseAgain(setCart([]))} className='btn-choose-again'>CHOOSE AGAIN</button>
-
                     </div>
                 </div>
-
             </div>
             <Answer></Answer>
         </div>

@@ -2,7 +2,6 @@
     text-align: center;
     color: orange;
     font-weight: bold;
-   
 }
 .Choose-item{
     text-align: center;
@@ -16,7 +15,6 @@
 .pizzas-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-   
 }
 .cart-pizzas-container{
     margin-left: 10px;
@@ -39,7 +37,6 @@
     font-size: 15px;
     font-weight: bold;
     margin-right: 5px;
-  
 }
 .btn-choose-again{
     width: 100%;
@@ -51,15 +48,12 @@
     font-size: 15px;
     font-weight: bold;
     margin-top: 10px;
-  
 }
 .btn-choose:hover{
     background-color: orange;
-   
 }
 .btn-choose-again:hover{
     background-color: rgb(120, 240, 90);
-   
 }
 /* responsive for mobile */
 @media only screen and (max-width: 767px) {

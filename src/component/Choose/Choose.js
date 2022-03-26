@@ -11,11 +11,8 @@ const Choose = (props) => {
 
                 <h2>{name}</h2>
             </div>
-
             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
-
         </div>
-
     );
 };
 

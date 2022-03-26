@@ -1,10 +1,8 @@
 .choose img{
-   
         width:35px;
         height:35px;
         border:1px solid gray;
         border-radius: 30px;
-  
 }
 .choose h2{
     font-size: medium;
