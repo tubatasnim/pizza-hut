@@ -12,8 +12,6 @@ const Pizzas = () => {
     const [cart, setCart] = useState([]);
     const [choose, setChoose] = useState([]);
 
-
-
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -31,8 +29,11 @@ const Pizzas = () => {
     }
     const handleChooseCart = (cart) => {
         const chooseOne = [...choose, cart]
-        const selectOne = (Math.floor(Math.random() * chooseOne.length));
+        const selectOne = chooseOne[Math.floor(Math.random() * chooseOne.length)];
         setChoose(selectOne);
+        console.log('clicked');
+    }
+    const handleChooseAgain = () => {
     }
     return (
         <div >
@@ -55,23 +56,18 @@ const Pizzas = () => {
                             key={cart.name}
                             cart={cart}
                         ></Cart>)
-
-
-
-
                     }
                     <div>
 
                         {
                             choose.map(choose => <Choose
-                                // key={choose.toString()}
                                 key={choose.img}
                                 choose={choose}
                                 handleChooseCart={handleChooseCart}
                             ></Choose>)
                         }
-                        <button onClick={() => handleChooseCart(choose)} className='btn-choose'>CHOOSE 1 FOR ME</button>
-                        <button className='btn-choose-again'>CHOOSE AGAIN</button>
+                        <button onClick={() => handleChooseCart(cart)} className='btn-choose'>CHOOSE 1 FOR ME</button>
+                        <button onClick={() => handleChooseAgain(setCart([]))} className='btn-choose-again'>CHOOSE AGAIN</button>
 
                     </div>
                 </div>

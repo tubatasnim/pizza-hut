@@ -31,6 +31,10 @@
     padding: 10px;
     box-shadow: 10px 10px 10px 10px rgb(224, 221, 221);
 }
+.small-text{
+    color: red;
+    font-weight: bold;
+}
 @media only screen and (max-width: 767px) {
     .answer-container{
         grid-template-columns: repeat(1,1fr);
